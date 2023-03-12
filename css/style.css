@@ -1,0 +1,67 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(11, 133, 240);
+	padding: 30px 20px;	
+}
+
+.item input, .item-content {
+	display: none;
+}
+.item {
+	border: 1px solid;
+	margin: 5px 20px 5px 20px ;
+	border-color: rgb(233, 223, 230);
+	border-radius: 10px;
+	background-color: #d3d3d3;
+	padding: 10px 10px;
+	width: 700px;
+}
+.txtaboutcity {
+	padding: 10px 10px 10px 10px;
+	text-align: justify;
+	font-size: 16px;
+}
+
+.point-title {
+	display: block;
+	font-size: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	cursor: pointer;
+}
+.point-title::after {
+	content: '+';
+	float: right;
+}
+
+.item :checked + .point-title {
+	background-color: #778899;
+	opacity: 50%;
+	padding: 5px 5px;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.item :checked + .point-title::after {
+	content: '-';
+	float: right;
+}
+
+.item :checked ~ .item-content {
+	display: block;
+	
+}
+.item-content {
+	padding: 10px 10px;
+}
